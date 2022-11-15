@@ -1,9 +1,10 @@
 package com.example.Blogapplication.repository;
 
-import com.example.Blogapplication.model.Post;
+import com.example.Blogapplication.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PostRepository extends JpaRepository<Post, Long> {
+public interface AccountRepository extends JpaRepository<Account, Long> {
+
 }

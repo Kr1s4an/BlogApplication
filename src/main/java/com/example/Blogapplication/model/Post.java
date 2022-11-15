@@ -1,17 +1,17 @@
 package com.example.Blogapplication.model;
 
 
-import ch.qos.logback.classic.pattern.LineOfCallerConverter;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
-public class PostModel {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -21,4 +21,8 @@ public class PostModel {
     private String body;
     private LocalDateTime createdAt;
 
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "id", nullable = false)
+    private Account account;
 }
