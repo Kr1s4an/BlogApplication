@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blog :: Register</title>
+</head>
+<body>
+<div class="container">
+  <h2>Blog Application Register Page</h2>
+  <a th:href="@{/}">Home</a>
+  <hr/>
+  <form action="#"
+        th:action="@{/register}"
+        th:object="${account}"
+        method="post">
+    <div>
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" th:field="*{firstName}" placeholder="First Name"/>
+    </div>
+    <div>
+      <label for="lastName">Last Name</label>
+      <input id="lastName" type="text" th:field="*{lastName}" placeholder="Last Name"/>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="text" th:field="*{email}" placeholder="Email"/>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" th:field="*{password}" placeholder="Password"/>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</div>
+</body>
+</html>
