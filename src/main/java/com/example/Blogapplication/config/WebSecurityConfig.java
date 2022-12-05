@@ -24,6 +24,21 @@ public class WebSecurityConfig {
                 .antMatchers(HttpMethod.GET, "/posts/*").permitAll()
                 .anyRequest().authenticated();
 
+        http
+                .formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .usernameParameter("email")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/", true)
+                .failureUrl("/login?error")
+                .and()
+                .logout()
+                .logoutUrl("/logout")
+                .and()
+                .httpBasic();
+
+
         return http.build();
     }
 
