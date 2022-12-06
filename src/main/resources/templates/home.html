@@ -11,11 +11,7 @@
 <body>
 <div class="container">
     <h1>Spring Boot Blog Application</h1>
-    <ul>
-        <li><a th:href="@{/register}">Register</a></li>
-        <li><a th:href="@{/login}">Login</a></li>
-        <li><a th:href="@{/posts/new}">New Post</a></li>
-    </ul>
+        <a th:href="@{/posts/new}">New Post</a>
     <hr/>
     <div class="posts-container">
         <div class="post" th:each="post : ${posts}">
@@ -27,6 +23,20 @@
             <h5 th:text="'Published on: ' + ${post.createdAt}">Created At</h5>
             <br/>
         </div>
+    </div>
+    <ul sec:authorize="!isAuthenticated()">
+        <li><a th:href="@{/register}">Register</a></li>
+        <li><a th:href="@{/login}">Login</a></li>
+    </ul>
+    <div sec:authorize="isAuthenticated()">
+        <form action="#"
+              th:action="@{/logout}"
+              method="POST">
+            <div>
+                <label>Hi, <span sec:authentication="name">Username</span> </label>
+            </div>
+            <button type="submit">Logout</button>
+        </form>
     </div>
 </div>
 </body>
