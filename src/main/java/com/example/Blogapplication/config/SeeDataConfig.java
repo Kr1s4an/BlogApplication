@@ -46,6 +46,7 @@ public class SeeDataConfig implements CommandLineRunner {
             account1.setPassword("1000101");
             Set<Authority> authorities1 = new HashSet<>();
             authorityRepository.findById("ROLE_USER").ifPresent(authorities1::add);
+            authorityRepository.findById("ROLE_ADMIN").ifPresent(authorities1::add);
             account1.setAuthorities(authorities1);
 
             Account account2 = new Account();
@@ -55,7 +56,6 @@ public class SeeDataConfig implements CommandLineRunner {
             account2.setPassword("100110");
             Set<Authority> authorities2 = new HashSet<>();
             authorityRepository.findById("ROLE_USER").ifPresent(authorities2::add);
-            authorityRepository.findById("ROLE_ADMIN").ifPresent(authorities2::add);
             account2.setAuthorities(authorities2);
 
             accountService.save(account1);

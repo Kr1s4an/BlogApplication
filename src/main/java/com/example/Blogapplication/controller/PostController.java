@@ -86,4 +86,18 @@ public class PostController {
         return "redirect:/posts/" + post.getId();
     }
 
+    @GetMapping("/posts/{id}/delete")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public String deletePost(@PathVariable Long id){
+        Optional<Post> optionalPost = postService.getById(id);
+        if(optionalPost.isPresent()){
+            Post post = optionalPost.get();
+
+            postService.delete(post);
+            return "redirect:/";
+        }else{
+            return "404";
+        }
+    }
+
 }
