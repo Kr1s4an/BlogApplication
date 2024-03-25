@@ -1,7 +1,7 @@
-package com.example.Blogapplication.service;
+package com.example.WebBazar.service;
 
-import com.example.Blogapplication.model.Account;
-import com.example.Blogapplication.repository.AccountRepository;
+import com.example.WebBazar.model.Account;
+import com.example.WebBazar.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

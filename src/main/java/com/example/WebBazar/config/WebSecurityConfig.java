@@ -1,4 +1,4 @@
-package com.example.Blogapplication.config;
+package com.example.WebBazar.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;

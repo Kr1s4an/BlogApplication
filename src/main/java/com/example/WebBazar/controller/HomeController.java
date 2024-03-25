@@ -1,7 +1,7 @@
-package com.example.Blogapplication.controller;
+package com.example.WebBazar.controller;
 
-import com.example.Blogapplication.model.Post;
-import com.example.Blogapplication.service.PostService;
+import com.example.WebBazar.model.Post;
+import com.example.WebBazar.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

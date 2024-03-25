@@ -1,7 +1,7 @@
-package com.example.Blogapplication.controller;
+package com.example.WebBazar.controller;
 
-import com.example.Blogapplication.model.Account;
-import com.example.Blogapplication.service.AccountService;
+import com.example.WebBazar.model.Account;
+import com.example.WebBazar.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

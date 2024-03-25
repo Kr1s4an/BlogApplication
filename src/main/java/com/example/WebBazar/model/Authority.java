@@ -1,4 +1,4 @@
-package com.example.Blogapplication.model;
+package com.example.WebBazar.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

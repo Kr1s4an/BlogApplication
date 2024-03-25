@@ -1,7 +1,7 @@
-package com.example.Blogapplication.service;
+package com.example.WebBazar.service;
 
-import com.example.Blogapplication.model.Post;
-import com.example.Blogapplication.repository.PostRepository;
+import com.example.WebBazar.model.Post;
+import com.example.WebBazar.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

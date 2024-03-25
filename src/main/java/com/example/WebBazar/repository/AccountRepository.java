@@ -1,6 +1,6 @@
-package com.example.Blogapplication.repository;
+package com.example.WebBazar.repository;
 
-import com.example.Blogapplication.model.Account;
+import com.example.WebBazar.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

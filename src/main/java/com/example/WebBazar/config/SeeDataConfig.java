@@ -1,11 +1,11 @@
-package com.example.Blogapplication.config;
+package com.example.WebBazar.config;
 
-import com.example.Blogapplication.model.Account;
-import com.example.Blogapplication.model.Authority;
-import com.example.Blogapplication.model.Post;
-import com.example.Blogapplication.repository.AuthorityRepository;
-import com.example.Blogapplication.service.AccountService;
-import com.example.Blogapplication.service.PostService;
+import com.example.WebBazar.model.Account;
+import com.example.WebBazar.model.Authority;
+import com.example.WebBazar.model.Post;
+import com.example.WebBazar.repository.AuthorityRepository;
+import com.example.WebBazar.service.AccountService;
+import com.example.WebBazar.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

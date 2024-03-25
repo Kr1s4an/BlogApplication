@@ -1,6 +1,6 @@
-package com.example.Blogapplication.service;
+package com.example.WebBazar.service;
 
-import com.example.Blogapplication.model.Account;
+import com.example.WebBazar.model.Account;
 
 import java.util.List;
 import java.util.Optional;
