@@ -17,6 +17,7 @@
         <h5 th:text="'Created on: ' + ${post.createdAt}">Created At</h5>
         <h5 th:text="'Last updated at: ' + ${post.updatedAt}">Updated At</h5>
         <p th:text="${post.body}">body text</p>
+        <h5 th:text="'For contact you can call on: ' + ${post.phoneNumber}">Phone Number</h5>
     </div>
     <ul sec:authorize="isAuthenticated">
         <li><a th:href="@{'/posts/' + ${post.id} + '/edit'}">Edit</a> </li>

@@ -27,6 +27,10 @@
             <label for="new_post_body">Body</label>
             <textarea id="new_post_body" th:field="*{body}"></textarea>
         </div>
+        <div>
+            <label for="new_post_phoneNumber">Phone Number</label>
+            <input type="tel" id="new_post_phoneNumber" th:field="*{phoneNumber}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+        </div>
         <button type="submit">Update Post</button>
     </form>
 </div>
